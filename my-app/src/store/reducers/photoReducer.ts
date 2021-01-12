@@ -30,6 +30,16 @@ const initialstate = {
     {
       id: 6,
       url:
+        "https://images.unsplash.com/photo-1610397095767-84a5b4736cbd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    },
+    {
+      id: 6,
+      url:
+        "https://images.unsplash.com/photo-1610406402601-09c5de54b9f0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1014&q=80",
+    },
+    {
+      id: 6,
+      url:
         "https://images.unsplash.com/photo-1605310890188-8abe1fe4914e?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
     },
   ],

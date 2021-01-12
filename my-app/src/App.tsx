@@ -1,11 +1,12 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { Navbar } from "./component/organisms/navBar/naBar";
-import { Home } from "./component/pages/home/home";
+import Home from "./component/pages/home/home";
 import { PicModal } from "./component/pages/picModal/picModal";
 import { connect } from "react-redux";
 import "./styles/App.scss";
 import { state } from "./store/reducers/rootReducer";
+
 function App() {
   return (
     <>
@@ -19,7 +20,7 @@ function App() {
 }
 
 const mapStateToProps = (state: state) => {
-  console.log(state.photo);
+  console.log(state);
   return {
     state,
   };

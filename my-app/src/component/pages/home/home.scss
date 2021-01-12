@@ -1,5 +1,6 @@
 .home {
-  height: 550px;
+  width: 100vw;
+  height: 600px;
   @include tablet {
     height: 300px;
   }
@@ -139,6 +140,17 @@
           }
         }
       }
+    }
+  }
+  .gallery {
+    width: 85%;
+    margin: auto;
+    margin-top: 3rem;
+    @media (max-width: 1000px) {
+      width: 95%;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
     }
   }
 }

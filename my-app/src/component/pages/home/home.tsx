@@ -1,8 +1,18 @@
 import React from "react";
 import { HoriNavbar } from "../../organisms/horiNavbar/horiNavbar";
 import SearchIcon from "@material-ui/icons/Search";
+import Photo from "../../organisms/photo/photo";
+import { connect } from "react-redux";
+import { state } from "../../../store/reducers/rootReducer";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
-export const Home = () => {
+interface Props {
+  pics: {
+    id: number;
+    url: string;
+  }[];
+}
+const Home: React.FC<Props> = ({ pics }) => {
   return (
     <div className="home">
       <HoriNavbar />
@@ -24,6 +34,24 @@ export const Home = () => {
           </div>
         </div>
       </div>
+      <div className="gallery">
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 800: 2, 1000: 3 }}>
+          <Masonry gutter={20}>
+            {pics.map((pic, i) => (
+              <Photo photo={pic.url} />
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
     </div>
   );
 };
+
+const mapStateToProps = (state: state) => {
+  console.log(state);
+  return {
+    pics: state.photo.photos,
+  };
+};
+
+export default connect(mapStateToProps)(Home);
