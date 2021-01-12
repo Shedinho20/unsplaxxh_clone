@@ -1,0 +1,144 @@
+.home {
+  height: 550px;
+  @include tablet {
+    height: 300px;
+  }
+
+  .contain {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    img {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.38) 0,
+        rgba(0, 0, 0, 0.38) 3.5%,
+        rgba(0, 0, 0, 0.379) 7%,
+        rgba(0, 0, 0, 0.377) 10.35%,
+        rgba(0, 0, 0, 0.375) 13.85%,
+        rgba(0, 0, 0, 0.372) 17.35%,
+        rgba(0, 0, 0, 0.369) 20.85%,
+        rgba(0, 0, 0, 0.366) 24.35%,
+        rgba(0, 0, 0, 0.364) 27.85%,
+        rgba(0, 0, 0, 0.361) 31.35%,
+        rgba(0, 0, 0, 0.358) 34.85%,
+        rgba(0, 0, 0, 0.355) 38.35%,
+        rgba(0, 0, 0, 0.353) 41.85%,
+        rgba(0, 0, 0, 0.351) 45.35%,
+        rgba(0, 0, 0, 0.35) 48.85%,
+        rgba(0, 0, 0, 0.353) 52.35%,
+        rgba(0, 0, 0, 0.36) 55.85%,
+        rgba(0, 0, 0, 0.371) 59.35%,
+        rgba(0, 0, 0, 0.385) 62.85%,
+        rgba(0, 0, 0, 0.402) 66.35%,
+        rgba(0, 0, 0, 0.42) 69.85%,
+        rgba(0, 0, 0, 0.44) 73.35%,
+        rgba(0, 0, 0, 0.46) 76.85%,
+        rgba(0, 0, 0, 0.48) 80.35%,
+        rgba(0, 0, 0, 0.498) 83.85%,
+        rgba(0, 0, 0, 0.515) 87.35%,
+        rgba(0, 0, 0, 0.529) 90.85%,
+        rgba(0, 0, 0, 0.54) 94.35%,
+        rgba(0, 0, 0, 0.547) 97.85%,
+        rgba(0, 0, 0, 0.55)
+      );
+    }
+    .content {
+      position: absolute;
+      z-index: 1000;
+      height: 100%;
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      @include tablet {
+        width: 100%;
+        padding-left: 20px;
+      }
+      .input {
+        width: 100%;
+        position: relative;
+        margin-top: 2rem;
+        @include tablet {
+          display: none;
+        }
+        input {
+          width: 100%;
+          width: 100%;
+          padding: 1.5rem 30px;
+          padding-left: 60px;
+          font-size: 1rem;
+          font-weight: 400;
+          letter-spacing: 0.04rem;
+          border: none;
+          background-color: #eee;
+          height: 42px;
+          border-radius: 5px;
+          &:focus {
+            outline: none;
+            background-color: white;
+            border: 2px solid #eee;
+          }
+        }
+
+        .search_icon {
+          position: absolute;
+          left: 20px;
+          top: 14px;
+          font-size: 1.5rem;
+          color: rgb(138, 135, 135);
+        }
+      }
+
+      .lead_text {
+        width: 100%;
+        h2 {
+          font-size: 2.5rem;
+          letter-spacing: 0.06rem;
+          color: white;
+          line-height: 5rem;
+          @include tablet {
+            font-size: 1.8rem;
+            line-height: 3rem;
+          }
+          @include phone {
+            font-size: 1.3rem;
+            line-height: 2.2rem;
+          }
+        }
+        h3 {
+          font-size: 1.1rem;
+          width: 50%;
+          white-space: nowrap;
+          line-height: 2rem;
+          color: white;
+          letter-spacing: 0.1rem;
+          @include tablet {
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+          }
+          @include phone {
+            font-size: 0.8rem;
+            line-height: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.horiNavBar {
+  width: 100%;
+  margin-top: 0.5rem;
+  box-shadow: 0 1.5px 1.5px rgba(0, 0, 0, 0.071);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  ul {
+    list-style: none;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    width: 95%;
+
+    &::-webkit-scrollbar {
+      display: none;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+
+  .scroll {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 3s ease-in-out all;
+  }
+  .left {
+    background-image: linear-gradient(to right top, #ffffff, #ffffff, #fffffff6, #ffffffab, #ffffffad);
+    left: 0;
+    padding-right: 1.5rem;
+  }
+  .right {
+    background-image: linear-gradient(to right top, #fffffff6, #ffffffab, #ffffff, #ffffff, #ffffff);
+    right: 0;
+    top: 0;
+    padding-left: 1.5rem;
+  }
+}

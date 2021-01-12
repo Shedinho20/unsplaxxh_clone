@@ -1,0 +1,47 @@
+@import "./variable.scss";
+@import "../component/organisms/navBar/naBar.scss";
+@import "../component/organisms/horiNavbar/horiNavbar.scss";
+@import "../component/pages/home/home.scss";
+@import "../component/organisms/link/link.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  color: rgb(138, 135, 135);
+}
+input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.btn {
+  font-size: 14px;
+  color: #767676;
+  font-weight: 600;
+  white-space: nowrap;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.071);
+  transition: all 0.1s ease-in-out;
+  text-align: center;
+  padding: 7px 15px;
+  border: 1px solid #d1d1d1;
+  margin-left: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: black;
+    color: black;
+    transition: 0.3s ease-in-out all;
+  }
+}
+
+.btn:focus {
+  outline: none;
+}
+.linkG {
+  text-decoration: none;
+}
